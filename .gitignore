@@ -17,6 +17,6 @@ Thumbs.db
 # Vercel build output (if any)
 .vercel/
 
-./data/images
-./data/aug_images
-./data/test
+/data/images/
+/data/aug_images/
+/data/test/
