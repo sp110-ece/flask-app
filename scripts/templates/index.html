@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stretch App</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: #fdf5e6; /* soft cream background */
+                background-image: url("palm-tree.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                filter: brightness(0.85);
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+
+            /* Faded overlay to match the camera page feel */
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(253, 245, 230, 0.8); /* cream tint */
+                z-index: 0;
+            }
+
+            h1 {
+                font-size: 3em;
+                z-index: 1;
+                color: #4a5e54; /* muted grey-green */
+                text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+                margin-bottom: 20px;
+            }
+
+             h2 {
+                font-size: 1.5em;
+                z-index: 1;
+                color: #4a5e54; /* muted grey-green */
+                text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+                margin-bottom: 20px;
+            }
+
+            form {
+                z-index: 1;
+            }
+
+            form button {
+                background-color: #ffffffcc;
+                border: none;
+                padding: 15px 30px;
+                font-size: 1.2em;
+                border-radius: 10px;
+                cursor: pointer;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+                transition: all 0.3s ease;
+            }
+
+            form button:hover {
+                background-color: #fff0e0;
+                transform: scale(1.05);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to Stretch App</h1>
+        <h2>
+            1. Standing Quad Stretch
+            <br>
+            2. Sitting Hamstring Stretch
+        </h2>
+        <form action="{{ url_for('stretch1') }}">
+            <button>Start Stretches</button>
+        </form>
+    </body>
+
+</html>

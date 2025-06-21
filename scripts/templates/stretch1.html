@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Posture Feedback</title>
+        <style>
+            body {
+                background-color: #f5f0e6;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                font-family: 'Helvetica Neue', sans-serif;
+            }
+            .camera-frame {
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                border: 2px solid #ddd;
+            }
+            .video-feed {
+                width: auto;   /* 95% of the viewport width */
+                height: 90vh;  /* Keeps aspect ratio */
+                object-fit: cover;
+                display: block;
+                margin: 0 auto; /* Center it horizontally */
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="camera-frame">
+            <img src="{{ ('/video_feed') }}" class="video-feed" />
+        </div>
+    </body>
+    </html>
